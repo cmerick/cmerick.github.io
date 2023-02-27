@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav {
+    width: 100vw;
+    position: fixed;
+    display: inline-block;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+    text-align: center;
+
+    ul li {
+        display: inline-block;
+
+        a {
+            display: flex;
+
+            text-decoration: none;
+            padding: 5px 0;
+            margin: 15px 10px;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                border-bottom: 3px solid white;
+            }
+
+
+        }
+
+        @media(max-width: 428px) {
+            a {
+                font-size: 3vw;
+            }
+        }
+    }
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    align-items: center;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    section {
+
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        scroll-snap-align: center;
+        align-items: center;
+        padding: 10px 20px;
+
+
+        h1 {
+            color: white;
+            text-shadow: 1px 1px 4px #000;
+        }
+
+        &#one {
+            background-color: #434242;
+
+
+        }
+
+        &#two {
+            background-color: #434242;
+        }
+
+        &#three {
+            background-color: #434242;
+        }
+
+        &#four {
+            background-color: #434242;
+        }
+
+    }
+
+
+
+    
+
+
+
+}
+
+#arrows{
+    position: fixed;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+    #prev,
+    #next {
+        background: none;
+        border: none;
+        position: fixed;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 5vw;
+        color: white;
+        margin: 0 15px
+        
+    }
+    #next {
+        right: 0;
+    }
+}
+

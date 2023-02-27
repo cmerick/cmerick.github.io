@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "HackerWeb",
+    "short_name": "HackerWeb",
+    "start_url": "http://127.0.0.1:5500/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "A readable Hacker News app.",
+    "theme_color": "gray",
+    "icons": [
+      {
+        "src": "./assets/apple-touch-icon.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./assets/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }

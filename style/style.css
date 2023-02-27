@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  display: inline-block;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: flex;
+  text-decoration: none;
+  padding: 5px 0;
+  margin: 15px 10px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid white;
+}
+@media (max-width: 428px) {
+  nav ul li a {
+    font-size: 3vw;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: center;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.container section {
+  flex: none;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  scroll-snap-align: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+.container section h1 {
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+}
+.container section#one {
+  background-color: #434242;
+}
+.container section#two {
+  background-color: #434242;
+}
+.container section#three {
+  background-color: #434242;
+}
+.container section#four {
+  background-color: #434242;
+}
+
+#arrows {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+#arrows #prev,
+#arrows #next {
+  background: none;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 5vw;
+  color: white;
+  margin: 0 15px;
+}
+#arrows #next {
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
