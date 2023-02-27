@@ -1,51 +1,75 @@
 let number = 1;
+const scrolling = document.querySelector(".container");
 
-
-window.onload = async function () {
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    console.log('Mobile');
-    document.getElementById("arrows").style.display='none';
+window.onload = function () {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    console.log("Mobile");
+    document.getElementById("arrows").style.display = "none";
   }
-  else{
-
+  if (/Edg/i.test(navigator.userAgent)) {
+    scrollWheel = (event) => {
+      let value = event.deltaY;
+      scroll(value);
+    };
+  } else {
+    setTimeout(() => {
+      scrollWheel = (event) => {
+        let value = event.deltaY;
+        setTimeout(() => {
+          scroll(value);
+        }, 1000);
+      };
+    }, 100);
   }
-}
-
+};
 
 const next = () => {
-  switch(number){
+  switch (number) {
     case 1:
-    document.getElementById('two').scrollIntoView({behavior: 'smooth'});
-    number = 2;
-    break;
+      document.getElementById("two").scrollIntoView({ behavior: "smooth" });
+      number = 2;
+      break;
     case 2:
-    document.getElementById('three').scrollIntoView({behavior: 'smooth'});
-    number = 3;
-    break;
+      document.getElementById("three").scrollIntoView({ behavior: "smooth" });
+      number = 3;
+      break;
     case 3:
-    document.getElementById('four').scrollIntoView({behavior: 'smooth'});
-    number = 4;
-    break;
+      document.getElementById("four").scrollIntoView({ behavior: "smooth" });
+      number = 4;
+      break;
     default:
-    break;
+      break;
   }
-}
+};
 
 const prev = () => {
-  switch(number){
+  switch (number) {
     case 2:
-    document.getElementById('one').scrollIntoView({behavior: 'smooth'});
-    number = 1;
-    break;
+      document.getElementById("one").scrollIntoView({ behavior: "smooth" });
+      number = 1;
+      break;
     case 3:
-    document.getElementById('two').scrollIntoView({behavior: 'smooth'});
-    number = 2;
-    break;
+      document.getElementById("two").scrollIntoView({ behavior: "smooth" });
+      number = 2;
+      break;
     case 4:
-    document.getElementById('three').scrollIntoView({behavior: 'smooth'});
-    number = 3;
-    break;
+      document.getElementById("three").scrollIntoView({ behavior: "smooth" });
+      number = 3;
+      break;
     default:
-    break;
+      break;
   }
-}
+};
+
+const scroll = (delta) => {
+  if (delta > 0) {
+    next();
+  }
+  if (delta < 0) {
+    prev();
+  }
+};
