@@ -1,9 +1,21 @@
+@import './sass/common';
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
 }
+
+html {
+    font-size: 16px;
+    // Magic:
+    @media (max-width: 1000px) {
+      font-size: calc(8px + .4vw);
+    }
+  }
 
 nav {
     width: 100vw;
@@ -22,14 +34,14 @@ nav {
             padding: 5px 0;
             margin: 15px 10px;
             color: white;
-            font-weight: 700;
+            font-weight: 300;
             text-transform: uppercase;
             text-align: center;
-            border-bottom: 3px solid transparent;
+            border-bottom: 2px solid transparent;
             transition: all 0.25s ease-in-out;
 
             &:hover {
-                border-bottom: 3px solid white;
+                border-bottom: 2px solid white;
             }
 
 
@@ -70,12 +82,22 @@ nav {
 
 
         h1 {
+            font-size: 4rem;
+            font-weight: 700;
             color: white;
             text-shadow: 1px 1px 4px #000;
         }
 
         &#one {
-            background-color: #434242;
+            background-color: $bg-color; 
+            display: flex;
+            justify-content: space-around;
+            
+
+            span{
+                color: white;
+                font-size: 2rem;
+            }
 
 
         }
@@ -90,6 +112,16 @@ nav {
 
         &#four {
             background-color: #434242;
+        }
+
+        @media(max-width: 428px) {
+            &#one {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+    
+    
+            }
         }
 
     }
@@ -118,9 +150,15 @@ nav {
         text-decoration: none;
         font-size: 5vw;
         color: white;
-        margin: 0 15px
+        margin: 0 15px;
+        transition: 1s;
         
     }
+
+    #prev:hover, #next:hover {
+         font-size: 7vw;
+    }
+
     #next {
         right: 0;
     }
