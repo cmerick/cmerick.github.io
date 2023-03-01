@@ -162,5 +162,24 @@ nav {
     #next {
         right: 0;
     }
+
+}
+
+#link-icons{
+    position: fixed;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+        a{
+
+            margin-left: 10px;
+            text-decoration: none;
+            color: white;
+        }
 }
 
