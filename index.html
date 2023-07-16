@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portifólio de Erick Castilho Mestre" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#4285f4" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <title>Portifólio</title>
 </head>
-<body>
-  <header class="header">
-    <span class="logo">Portfolio</span>
-    <nav class="menu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portifólio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <div id="home">teste</div>
-  <div id="about">teste</div>
-  <div id="portfolio">teste</div>
-  <div id="contact">teste</div>
+
+<body onwheel="scrollWheel(event)">
+  <nav>
+    <ul>
+      <li><a href="#one" onclick="number = 1">About</a></li>
+      <li><a href="#two" onclick="number = 2">FrontEnd</a></li>
+      <li><a href="#three" onclick="number = 3">Mobile</a></li>
+      <li><a href="#four" onclick="number = 4">BackEnd</a></li>
+      <li><a href="#five" onclick="number = 5">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="one">
+      <div class="one-left">
+        <img src="./img/avatar.jpg" alt="" srcset="">
+        <h1>Olá, eu sou Erick Castilho</h1>
+        <span class="job-span">Fullstack Developer</span>
+      </div>
+      <div class="one-right">
+      <ul class="tecnologies">
+        <li><img src="./img/icon-react-96.png" alt="React">
+          <div class="separator"></div><span>React</span>
+
+        </li>
+        <li><img src="./img/icon-react-96.png" alt="React-native">
+          <div class="separator"></div><span>React Native</span>
+
+        </li>
+        <li>
+          <img src="./img/icon-node-js-96.png" alt="Nodejs">
+          <div class="separator"></div><span>Node.js</span>
+        </li>
+      </ul>
+      <div class="one-right-list">
+        <button onclick="openAndCloseList()" class="one-button-up"><img src="./img/icon-chevron-up-96.png" alt=""></button>
+        <button onclick="openAndCloseList()" class="one-button-down"><img src="./img/icon-chevron-down-96.png" alt=""></button>
+        <div class="tec-list">
+          <ul>
+            <li><img src="./img/more/icons8-bootstrap-96.png" alt="" srcset=""><span>Bootstrap</span></li>
+            <li><img src="./img/more/icons8-tailwindcss-96.png" alt="" srcset=""><span>TailwindCSS</span></li>
+            <li><img src="./img/more/icons8-styled-components-96.png" alt="" srcset=""><span>Styled<br>Components</span></li>
+          </ul>
+          <ul>
+            <li><img src="./img/more/nextjs.256x256.png" alt="" srcset=""><span>Next.js</span></li>
+            <li><img src="./img/more/svgviewer-png-output.png" alt="" srcset=""><span>Expo</span></li>
+            <li><img src="./img//more/fastify.256x164.png" alt="" srcset=""><span>Fastify</span></li>
+          </ul>
+          <ul>
+            <li><img src="./img/more/icons8-postgre-sql-a-free-and-open-source-relational-database-management-system-96.png" alt="" srcset=""><span>PostgreSQL</span></li>
+            <li><img src="./img/more/icons8-postman-is-the-only-complete-api-development-environment-96.png" alt="" srcset=""><span>Postman</span></li>
+            <li><img src="./img/more/icons8-mongodb-96.png" alt="" srcset=""><span>MongoDB</span></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      
+  
+  </section>
+  <section id="two">
+    <h1>FrontEnd</h1>
+  </section>
+  <section id="three">
+    <h1>Mobile</h1>
+  </section>
+  <section id="four">
+    <h1>BackEnd</h1>
+  </section>
+  <section id="five">
+    <h1>Contact</h1>
+  </section>
+  </div>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
